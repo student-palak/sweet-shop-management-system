@@ -43,6 +43,13 @@ app.put("/api/sweets/:id", (req, res) => {
   app.delete("/api/sweets/:id", (req, res) => {
   res.status(204).send();
 });
+app.post("/api/sweets/:id/purchase", (req, res) => {
+  res.status(200).json({ message: "Purchased" });
+});
+
+app.post("/api/sweets/:id/restock", (req, res) => {
+  res.status(200).json({ message: "Restocked" });
+});
 
 });
 

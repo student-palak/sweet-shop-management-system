@@ -45,5 +45,11 @@ it("should delete a sweet", async () => {
 
   expect(response.status).toBe(204);
 });
+it("should purchase a sweet", async () => {
+  const response = await request(app)
+    .post("/api/sweets/1/purchase");
+
+  expect(response.status).toBe(200);
+});
 
 });
