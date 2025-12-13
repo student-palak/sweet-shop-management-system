@@ -15,4 +15,11 @@ describe("Sweets API", () => {
     expect(response.status).toBe(201);
     expect(response.body.name).toBe("Gulab Jamun");
   });
+
+  it("should return a list of sweets", async () => {
+    const response = await request(app).get("/api/sweets");
+
+    expect(response.status).toBe(200);
+    expect(Array.isArray(response.body)).toBe(true);
+  });
 });

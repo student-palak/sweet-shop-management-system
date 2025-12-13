@@ -29,4 +29,9 @@ app.post("/api/sweets", (req, res) => {
   });
 });
 
+app.get("/api/sweets", (req, res) => {
+  res.status(200).json([]);
+});
+
+
 export default app;
