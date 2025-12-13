@@ -1,4 +1,5 @@
 import express from "express";
+import jwt from "jsonwebtoken";
 
 const app = express();
 app.use(express.json());
@@ -10,9 +11,15 @@ app.post("/api/auth/register", (req, res) => {
 });
 
 app.post("/api/auth/login", (req, res) => {
-  res.status(200).json({
-    token: "dummy-token"
-  });
+  const token = jwt.sign(
+    { email: req.body.email },
+    "secret-key",
+    { expiresIn: "1h" }
+  );
+
+  res.status(200).json({ token });
 });
+
+
 
 export default app;

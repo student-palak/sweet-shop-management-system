@@ -2,7 +2,7 @@ import request from "supertest";
 import app from "../src/app";
 
 describe("Auth API - Login", () => {
-  it("should login an existing user and return a token", async () => {
+  it("should login and return a JWT token", async () => {
     const response = await request(app)
       .post("/api/auth/login")
       .send({
@@ -12,5 +12,9 @@ describe("Auth API - Login", () => {
 
     expect(response.status).toBe(200);
     expect(response.body.token).toBeDefined();
+
+    // JWT tokens have 3 parts separated by dots
+    const tokenParts = response.body.token.split(".");
+    expect(tokenParts.length).toBe(3);
   });
 });
