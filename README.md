@@ -1,6 +1,12 @@
 ## My AI Usage
 
-I used AI tools (ChatGPT) as a development assistant during this project.
+I used ChatGPT as an AI assistant during development to:
+- Clarify requirements and design the API structure
+- Troubleshoot Prisma, Jest, and database integration issues
+- Improve code quality while following TDD principles
+
+All logic decisions and final implementations were reviewed and understood by me.
+
 
 ### How I used AI
 - To understand the assessment requirements clearly
@@ -15,3 +21,7 @@ understood, and verified by me.
 
 I treated AI as a productivity and learning aid, not as a replacement for
 problem-solving or understanding the code.
+
+## Database
+This project uses Prisma ORM with a SQLite database.
+The database schema is defined in `prisma/schema.prisma` and managed via Prisma migrations.
