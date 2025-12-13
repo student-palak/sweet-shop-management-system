@@ -31,5 +31,13 @@ describe("Sweets API", () => {
   expect(response.status).toBe(200);
   expect(Array.isArray(response.body)).toBe(true);
 });
+it("should update a sweet", async () => {
+  const response = await request(app)
+    .put("/api/sweets/1")
+    .send({ price: 15 });
+
+  expect(response.status).toBe(200);
+  expect(response.body.price).toBe(15);
+});
 
 });

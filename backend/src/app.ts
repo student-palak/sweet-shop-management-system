@@ -36,5 +36,10 @@ app.get("/api/sweets", (req, res) => {
 app.get("/api/sweets/search", (req, res) => {
   res.status(200).json([]);
 });
+app.put("/api/sweets/:id", (req, res) => {
+  res.status(200).json({
+    price: req.body.price
+  });
+});
 
 export default app;
