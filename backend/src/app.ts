@@ -33,5 +33,8 @@ app.get("/api/sweets", (req, res) => {
   res.status(200).json([]);
 });
 
+app.get("/api/sweets/search", (req, res) => {
+  res.status(200).json([]);
+});
 
 export default app;

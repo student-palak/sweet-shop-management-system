@@ -22,4 +22,14 @@ describe("Sweets API", () => {
     expect(response.status).toBe(200);
     expect(Array.isArray(response.body)).toBe(true);
   });
+
+  it("should search sweets by name", async () => {
+  const response = await request(app)
+    .get("/api/sweets/search")
+    .query({ name: "Gulab" });
+
+  expect(response.status).toBe(200);
+  expect(Array.isArray(response.body)).toBe(true);
+});
+
 });
