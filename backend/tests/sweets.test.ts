@@ -51,5 +51,13 @@ it("should purchase a sweet", async () => {
 
   expect(response.status).toBe(200);
 });
+it("should restock a sweet", async () => {
+  const response = await request(app)
+    .post("/api/sweets/1/restock")
+    .send({ quantity: 10 });
+
+  expect(response.status).toBe(200);
+  expect(response.body.message).toBe("Restocked");
+});
 
 });
