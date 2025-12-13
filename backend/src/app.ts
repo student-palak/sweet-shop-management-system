@@ -20,6 +20,13 @@ app.post("/api/auth/login", (req, res) => {
   res.status(200).json({ token });
 });
 
-
+app.post("/api/sweets", (req, res) => {
+  res.status(201).json({
+    name: req.body.name,
+    category: req.body.category,
+    price: req.body.price,
+    quantity: req.body.quantity
+  });
+});
 
 export default app;

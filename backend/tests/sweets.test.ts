@@ -1,0 +1,18 @@
+import request from "supertest";
+import app from "../src/app";
+
+describe("Sweets API", () => {
+  it("should add a new sweet", async () => {
+    const response = await request(app)
+      .post("/api/sweets")
+      .send({
+        name: "Gulab Jamun",
+        category: "Indian",
+        price: 10,
+        quantity: 50
+      });
+
+    expect(response.status).toBe(201);
+    expect(response.body.name).toBe("Gulab Jamun");
+  });
+});
