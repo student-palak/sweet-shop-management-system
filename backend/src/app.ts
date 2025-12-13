@@ -40,6 +40,10 @@ app.put("/api/sweets/:id", (req, res) => {
   res.status(200).json({
     price: req.body.price
   });
+  app.delete("/api/sweets/:id", (req, res) => {
+  res.status(204).send();
+});
+
 });
 
 export default app;
