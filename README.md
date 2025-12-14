@@ -66,6 +66,8 @@ This project is built as part of a technical assessment with a strong focus on:
 ### Admin Add / Edit Sweet
 ![Admin Add Edit](screenshots/admin-add-edit.png)
 
+### test report
+![test-report](screenshot/test-report.png)
 
 ## API Endpoints
 
