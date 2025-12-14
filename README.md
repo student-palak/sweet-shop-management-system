@@ -66,8 +66,15 @@ This project is built as part of a technical assessment with a strong focus on:
 ### Admin Add / Edit Sweet
 ![Admin Add Edit](screenshots/admin-add-edit.png)
 
-### test report
-![test-report](screenshot/test-report.png)
+
+## 🧪 Test Report
+
+All backend APIs were developed using **Test-Driven Development (TDD)** and validated using **Jest** and **Supertest**.
+
+Below is the test execution result showing all tests passing successfully:
+
+![Test Report](screenshots/test-report.png)
+
 
 ## API Endpoints
 
