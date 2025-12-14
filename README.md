@@ -10,37 +10,25 @@ This project is built as part of a technical assessment with a strong focus on:
 
 ## Features
 
-### User
-- Login authentication
-- View available sweets
-- Search sweets by:
-  - Name
-  - Category
-  - Minimum price
-  - Maximum price
-- Purchase sweets (disabled when out of stock)
+### User Features
+- User login using JWT authentication
+- View all available sweets
+- Search sweets by name, category, and price range
+- Purchase sweets (disabled if out of stock)
 
-### Admin
-- Login with admin role
+### Admin Features
+- Admin login (role-based access)
 - Add new sweets
 - Edit existing sweets
 - Delete sweets
 - Restock sweets
-- View full inventory
+- Admin-only controls hidden from normal users
 
-### System
-- Role-based UI rendering
-- Inventory validation
-- RESTful APIs
-- Full backend test coverage using Jest & Supertest
-
+### Security
+- Role-based UI rendering (Admin vs User)
+- Token-based authentication using JWT
 
 ## Tech Stack
-
-### Frontend
-- React (Vite)
-- Axios
-- CSS (Dark UI)
 
 ### Backend
 - Node.js
@@ -48,10 +36,13 @@ This project is built as part of a technical assessment with a strong focus on:
 - TypeScript
 - Prisma ORM
 - SQLite
+- JWT Authentication
+- Jest & Supertest (Testing)
 
-### Testing
-- Jest
-- Supertest
+### Frontend
+- React (Vite)
+- Axios
+- CSS
 
 ### Tools
 - Git & GitHub
@@ -74,6 +65,24 @@ This project is built as part of a technical assessment with a strong focus on:
 
 ### Admin Add / Edit Sweet
 ![Admin Add Edit](screenshots/admin-add-edit.png)
+
+
+## API Endpoints
+
+### Authentication
+- POST /api/auth/register
+- POST /api/auth/login
+
+### Sweets
+- POST /api/sweets (Admin)
+- GET /api/sweets
+- GET /api/sweets/search
+- PUT /api/sweets/:id (Admin)
+- DELETE /api/sweets/:id (Admin)
+
+### Inventory
+- POST /api/sweets/:id/purchase
+- POST /api/sweets/:id/restock (Admin)
 
 
 ## Setup & Run Instructions
